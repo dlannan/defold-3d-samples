@@ -1,0 +1,4 @@
+material: "/main/custom.material"
+vertices: "/main/temp.buffer"
+primitive_type: PRIMITIVE_TRIANGLES
+position_stream: "position"
