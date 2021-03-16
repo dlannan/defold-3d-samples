@@ -1,0 +1,65 @@
+name: "unnamed"
+tags: "model"
+vertex_program: "/assets/shaders/sky.vp"
+fragment_program: "/assets/shaders/sky.fp"
+vertex_space: VERTEX_SPACE_LOCAL
+vertex_constants {
+  name: "sunposition"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 5000.0
+    y: 1000.0
+    z: 5000.0
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "vparams"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 1.0
+    y: 2.0
+    z: 0.005
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "mtx_proj"
+  type: CONSTANT_TYPE_PROJECTION
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "mtx_worldview"
+  type: CONSTANT_TYPE_WORLDVIEW
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+fragment_constants {
+  name: "fparams"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 0.0
+    y: 0.5
+    z: 300.0
+    w: 0.7
+  }
+}
+fragment_constants {
+  name: "cameraPos"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
