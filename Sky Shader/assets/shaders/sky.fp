@@ -164,7 +164,7 @@ void main() {
 
 	vec3 texColor = ( Lin + L0 ) * 0.04 + vec3( 0.0, 0.0003, 0.00075 );
 
-	vec3 curr = Uncharted2Tonemap( ( log2( 2.0 / pow( fparams.w, 4.0 ) ) ) * texColor );
+	vec3 curr = Uncharted2Tonemap(  fparams.w * texColor );
 	vec3 color = curr * whiteScale;
 
 	vec3 retColor = pow( color, vec3( 1.0 / ( 1.2 + ( 1.2 * vSunfade ) ) ) );

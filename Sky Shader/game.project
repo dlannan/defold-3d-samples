@@ -14,7 +14,7 @@ input_method = HiddenInputField
 package = com.defold.example.basic3d
 
 [project]
-dependencies = 
+dependencies = https://github.com/Insality/druid/archive/master.zip
 title = Sky Shader
 
 [physics]
