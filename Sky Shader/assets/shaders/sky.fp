@@ -19,7 +19,6 @@ varying vec3 vBetaR;
 varying vec3 vBetaM;
 varying float vSunE;
 
-#define OCTAVES 6
 // uniform float time;
 // uniform float coverage;
 // uniform float cloudHeight;
@@ -29,6 +28,7 @@ uniform vec4 cameraPos;
 
 //uniform float mieDirectionalG;
 const float mieDirectionalG = 0.8;
+const int OCTAVES  = 6;
 
 float T;
 float rand(vec2 n) { 
