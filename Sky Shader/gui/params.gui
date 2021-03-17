@@ -45,8 +45,8 @@ nodes {
   text: "luminance:"
   font: "system_font"
   id: "txt_luminance"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   outline {
     x: 1.0
@@ -128,8 +128,8 @@ nodes {
 }
 nodes {
   position {
-    x: 100.0
-    y: 540.0
+    x: 624.0
+    y: 590.0
     z: 0.0
     w: 1.0
   }
@@ -162,8 +162,8 @@ nodes {
   text: "cloud level:"
   font: "system_font"
   id: "txt_cloud_level"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   outline {
     x: 1.0
@@ -246,7 +246,7 @@ nodes {
 nodes {
   position {
     x: 100.0
-    y: 490.0
+    y: 520.0
     z: 0.0
     w: 1.0
   }
@@ -279,8 +279,8 @@ nodes {
   text: "time speed:"
   font: "system_font"
   id: "txt_timespeed"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   outline {
     x: 1.0
@@ -363,7 +363,7 @@ nodes {
 nodes {
   position {
     x: 100.0
-    y: 440.0
+    y: 450.0
     z: 0.0
     w: 1.0
   }
@@ -396,8 +396,8 @@ nodes {
   text: "sun height:"
   font: "system_font"
   id: "txt_sunheight"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   outline {
     x: 1.0
@@ -479,8 +479,8 @@ nodes {
 }
 nodes {
   position {
-    x: 100.0
-    y: 390.0
+    x: 624.0
+    y: 520.0
     z: 0.0
     w: 1.0
   }
@@ -513,8 +513,8 @@ nodes {
   text: "cloud cover:"
   font: "system_font"
   id: "txt_cloudcover"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   outline {
     x: 1.0
@@ -614,8 +614,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 20.0
-    y: 20.0
+    x: 40.0
+    y: 40.0
     z: 0.0
     w: 1.0
   }
@@ -629,8 +629,8 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   texture: ""
   id: "box_luminance"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
@@ -650,8 +650,8 @@ nodes {
 }
 nodes {
   position {
-    x: 220.0
-    y: 540.0
+    x: 745.0
+    y: 590.0
     z: 0.0
     w: 1.0
   }
@@ -668,8 +668,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 20.0
-    y: 20.0
+    x: 40.0
+    y: 40.0
     z: 0.0
     w: 1.0
   }
@@ -683,8 +683,8 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   texture: ""
   id: "box_cloud_level"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
@@ -705,7 +705,7 @@ nodes {
 nodes {
   position {
     x: 220.0
-    y: 490.0
+    y: 520.0
     z: 0.0
     w: 1.0
   }
@@ -722,8 +722,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 20.0
-    y: 20.0
+    x: 40.0
+    y: 40.0
     z: 0.0
     w: 1.0
   }
@@ -737,8 +737,8 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   texture: ""
   id: "box_time_speed"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
@@ -759,7 +759,7 @@ nodes {
 nodes {
   position {
     x: 220.0
-    y: 440.0
+    y: 450.0
     z: 0.0
     w: 1.0
   }
@@ -776,8 +776,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 20.0
-    y: 20.0
+    x: 40.0
+    y: 40.0
     z: 0.0
     w: 1.0
   }
@@ -791,8 +791,8 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   texture: ""
   id: "box_sun_height"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
@@ -812,8 +812,8 @@ nodes {
 }
 nodes {
   position {
-    x: 220.0
-    y: 390.0
+    x: 745.0
+    y: 520.0
     z: 0.0
     w: 1.0
   }
@@ -830,8 +830,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 20.0
-    y: 20.0
+    x: 40.0
+    y: 40.0
     z: 0.0
     w: 1.0
   }
@@ -845,8 +845,8 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   texture: ""
   id: "box_cloud_cover"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
+  xanchor: XANCHOR_LEFT
+  yanchor: YANCHOR_TOP
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
   layer: ""

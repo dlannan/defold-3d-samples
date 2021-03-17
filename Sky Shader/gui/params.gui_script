@@ -8,35 +8,36 @@ function init(self)
 
 	self.druid = druid.new(self)
 
+	local slidersize = 160
 	local boxl = gui.get_position(gui.get_node("box_luminance"))
-	self.lum_slider = self.druid:new_slider("box_luminance", vmath.vector3(380, boxl.y, 0), function(_, value)
+	self.lum_slider = self.druid:new_slider("box_luminance", vmath.vector3(boxl.x + slidersize, boxl.y, 0), function(_, value)
 
 		msg.post("/main#main", "luminance", { value = value })
 		gui.set_text(gui.get_node("txt_luminance"), "luminance: "..math.ceil(value * 100) .. "%")
 	end)	
 	local boxc = gui.get_position(gui.get_node("box_cloud_level"))
-	self.ch_slider = self.druid:new_slider("box_cloud_level", vmath.vector3(380, boxc.y, 0), function(_, value)
+	self.ch_slider = self.druid:new_slider("box_cloud_level", vmath.vector3(boxc.x + slidersize, boxc.y, 0), function(_, value)
 
 		local cloudlevel = 50.0 + value * 1000
 		msg.post("/main#main", "cloud_level", { value = cloudlevel })
-		gui.set_text(gui.get_node("txt_cloud_level"), "cloud level: "..cloudlevel.. "m")
+		gui.set_text(gui.get_node("txt_cloud_level"), "cloud level: "..string.format("%0.02f", cloudlevel).. "m")
 	end)	
 	local boxt = gui.get_position(gui.get_node("box_time_speed"))
-	self.ts_slider = self.druid:new_slider("box_time_speed", vmath.vector3(380, boxt.y, 0), function(_, value)
+	self.ts_slider = self.druid:new_slider("box_time_speed", vmath.vector3(boxt.x + slidersize, boxt.y, 0), function(_, value)
 		
 		local ts = value * 10
 		msg.post("/main#main", "time_speed", { value = ts })
 		gui.set_text(gui.get_node("txt_timespeed"), "time speed: "..string.format("%0.02f", ts).. "X")
 	end)	
 	local boxs = gui.get_position(gui.get_node("box_sun_height"))
-	self.ts_slider = self.druid:new_slider("box_sun_height", vmath.vector3(380, boxs.y, 0), function(_, value)
+	self.ts_slider = self.druid:new_slider("box_sun_height", vmath.vector3(boxs.x + slidersize, boxs.y, 0), function(_, value)
 
 		local sh = value * 1000
 		msg.post("/main#main", "sun_height", { value = sh })
 		gui.set_text(gui.get_node("txt_sunheight"), "sun height: "..string.format("%0.02d", sh).. "m")
 	end)
 	local boxcc = gui.get_position(gui.get_node("box_cloud_cover"))
-	self.ts_slider = self.druid:new_slider("box_cloud_cover", vmath.vector3(380, boxcc.y, 0), function(_, value)
+	self.ts_slider = self.druid:new_slider("box_cloud_cover", vmath.vector3(boxcc.x + slidersize, boxcc.y, 0), function(_, value)
 
 		msg.post("/main#main", "cloud_cover", { value = 1.0-value })
 		gui.set_text(gui.get_node("txt_cloudcover"), "cloud cover: "..math.ceil(value * 100).. "%")
