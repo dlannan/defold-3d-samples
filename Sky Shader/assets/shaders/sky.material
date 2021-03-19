@@ -1,4 +1,4 @@
-name: "unnamed"
+name: "sky"
 tags: "model"
 vertex_program: "/assets/shaders/sky.vp"
 fragment_program: "/assets/shaders/sky.fp"

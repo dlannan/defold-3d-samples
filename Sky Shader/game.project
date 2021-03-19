@@ -8,13 +8,14 @@ shared_state = 1
 [display]
 width = 960
 height = 640
-high_dpi = 0
+high_dpi = 1
 fullscreen = 0
 dynamic_orientation = 1
 
 [android]
 input_method = HiddenInputField
 package = com.defold.example.basic3d
+debuggable = 0
 
 [project]
 dependencies = https://github.com/Insality/druid/archive/master.zip
@@ -28,4 +29,7 @@ bundle_identifier = com.defold.example.basic3d
 
 [ios]
 bundle_identifier = com.defold.example.basic3d
+
+[shader]
+output_spirv = 0
 

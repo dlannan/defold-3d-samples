@@ -12,7 +12,7 @@ background_color {
 nodes {
   position {
     x: 100.0
-    y: 590.0
+    y: 589.0
     z: 0.0
     w: 1.0
   }
@@ -128,8 +128,8 @@ nodes {
 }
 nodes {
   position {
-    x: 624.0
-    y: 590.0
+    x: 102.0
+    y: 172.0
     z: 0.0
     w: 1.0
   }
@@ -246,7 +246,7 @@ nodes {
 nodes {
   position {
     x: 100.0
-    y: 520.0
+    y: 519.0
     z: 0.0
     w: 1.0
   }
@@ -363,7 +363,7 @@ nodes {
 nodes {
   position {
     x: 100.0
-    y: 450.0
+    y: 449.0
     z: 0.0
     w: 1.0
   }
@@ -479,8 +479,8 @@ nodes {
 }
 nodes {
   position {
-    x: 624.0
-    y: 520.0
+    x: 102.0
+    y: 102.0
     z: 0.0
     w: 1.0
   }
@@ -597,7 +597,7 @@ nodes {
 nodes {
   position {
     x: 220.0
-    y: 590.0
+    y: 589.0
     z: 0.0
     w: 1.0
   }
@@ -650,8 +650,8 @@ nodes {
 }
 nodes {
   position {
-    x: 745.0
-    y: 590.0
+    x: 223.0
+    y: 172.0
     z: 0.0
     w: 1.0
   }
@@ -705,7 +705,7 @@ nodes {
 nodes {
   position {
     x: 220.0
-    y: 520.0
+    y: 519.0
     z: 0.0
     w: 1.0
   }
@@ -759,7 +759,7 @@ nodes {
 nodes {
   position {
     x: 220.0
-    y: 450.0
+    y: 449.0
     z: 0.0
     w: 1.0
   }
@@ -812,8 +812,8 @@ nodes {
 }
 nodes {
   position {
-    x: 745.0
-    y: 520.0
+    x: 223.0
+    y: 102.0
     z: 0.0
     w: 1.0
   }
