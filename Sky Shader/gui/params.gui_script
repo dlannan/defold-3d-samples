@@ -29,13 +29,6 @@ function init(self)
 		msg.post("/main#main", "time_speed", { value = ts })
 		gui.set_text(gui.get_node("txt_timespeed"), "time speed: "..string.format("%0.02f", ts).. "X")
 	end)	
-	local boxs = gui.get_position(gui.get_node("box_sun_height"))
-	self.ts_slider = self.druid:new_slider("box_sun_height", vmath.vector3(boxs.x + slidersize, boxs.y, 0), function(_, value)
-
-		local sh = value * 1000
-		msg.post("/main#main", "sun_height", { value = sh })
-		gui.set_text(gui.get_node("txt_sunheight"), "sun height: "..string.format("%0.02d", sh).. "m")
-	end)
 	local boxcc = gui.get_position(gui.get_node("box_cloud_cover"))
 	self.ts_slider = self.druid:new_slider("box_cloud_cover", vmath.vector3(boxcc.x + slidersize, boxcc.y, 0), function(_, value)
 

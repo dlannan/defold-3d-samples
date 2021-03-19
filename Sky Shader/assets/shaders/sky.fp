@@ -1,3 +1,7 @@
+// Tone mapping from:
+// https://www.shadertoy.com/view/lslGzl
+//
+// NOTE: All vars are highp because of issues on android. Will investigate and resolve at later date.
 
 varying  highp  vec3 vWorldPosition;
 varying  highp  vec3 vSunDirection;

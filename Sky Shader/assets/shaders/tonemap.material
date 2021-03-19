@@ -1,0 +1,4 @@
+name: "tonemap"
+vertex_program: "/builtins/materials/model.vp"
+fragment_program: "/assets/shaders/tonemap.fp"
+vertex_space: VERTEX_SPACE_WORLD
