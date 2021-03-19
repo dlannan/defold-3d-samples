@@ -1,0 +1,5 @@
+material: "/builtins/materials/model.material"
+vertices: "/assets/models/temp.buffer"
+textures: "/assets/images/brown.png"
+primitive_type: PRIMITIVE_TRIANGLES
+position_stream: "position"

@@ -1,0 +1,57 @@
+local druid = require("druid.druid")
+
+local function button_callback(self)
+	print("Button was clicked!")
+end
+
+function init(self)
+
+	self.druid = druid.new(self)
+
+	local slidersize = 160
+	local boxl = gui.get_position(gui.get_node("box_luminance"))
+	self.lum_slider = self.druid:new_slider("box_luminance", vmath.vector3(boxl.x + slidersize, boxl.y, 0), function(_, value)
+
+		msg.post("/main#main", "luminance", { value = value })
+		gui.set_text(gui.get_node("txt_luminance"), "luminance: "..math.ceil(value * 100) .. "%")
+	end)	
+	local boxc = gui.get_position(gui.get_node("box_cloud_level"))
+	self.ch_slider = self.druid:new_slider("box_cloud_level", vmath.vector3(boxc.x + slidersize, boxc.y, 0), function(_, value)
+
+		local cloudlevel = 50.0 + value * 1000
+		msg.post("/main#main", "cloud_level", { value = cloudlevel })
+		gui.set_text(gui.get_node("txt_cloud_level"), "cloud level: "..string.format("%0.02f", cloudlevel).. "m")
+	end)	
+	local boxt = gui.get_position(gui.get_node("box_time_speed"))
+	self.ts_slider = self.druid:new_slider("box_time_speed", vmath.vector3(boxt.x + slidersize, boxt.y, 0), function(_, value)
+		
+		local ts = value * 10
+		msg.post("/main#main", "time_speed", { value = ts })
+		gui.set_text(gui.get_node("txt_timespeed"), "time speed: "..string.format("%0.02f", ts).. "X")
+	end)	
+	local boxcc = gui.get_position(gui.get_node("box_cloud_cover"))
+	self.ts_slider = self.druid:new_slider("box_cloud_cover", vmath.vector3(boxcc.x + slidersize, boxcc.y, 0), function(_, value)
+
+		msg.post("/main#main", "cloud_cover", { value = 1.0-value })
+		gui.set_text(gui.get_node("txt_cloudcover"), "cloud cover: "..math.ceil(value * 100).. "%")
+	end)	
+end
+
+function final(self)
+	self.druid:final()
+end
+
+function update(self, dt)
+end
+
+function on_message(self, message_id, message, sender)
+	self.druid:on_message(message_id, message, sender)
+end
+
+
+function on_input(self, action_id, action)
+	return self.druid:on_input(action_id, action)
+end
+
+function on_reload(self)
+end

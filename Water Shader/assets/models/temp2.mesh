@@ -1,0 +1,6 @@
+material: "/assets/shaders/water.material"
+vertices: "/assets/models/temp2.buffer"
+textures: "/assets/images/green.png"
+primitive_type: PRIMITIVE_TRIANGLES
+position_stream: "position"
+normal_stream: "normal"
