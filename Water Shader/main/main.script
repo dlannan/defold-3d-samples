@@ -35,6 +35,7 @@ function init(self)
 	self.cubeA = go.get_rotation("/main#genmesh")
 	self.planeA = go.get_rotation("/ground#genmesh")
 	self.angle = 0.0
+
 end
 
 function update(self)
@@ -45,6 +46,10 @@ function update(self)
 	go.set_rotation(self.cubeA * rot_angle, "/gogen#genmesh")
 	--go.set_rotation(self.planeA * rotx_angle, "/ground#genmesh")
 	self.angle = self.angle + 1.0
+
+	if self.show_demo_window then
+		imgui.demo()
+	end
 end
 
 function on_input(self, action_id, action)
@@ -81,3 +86,4 @@ function on_message(self, message_id, message)
 		self.cloud_cover = message.value
 	end		
 end
+

@@ -1,5 +1,5 @@
 [bootstrap]
-main_collection = /main/main.collectionc
+main_collection = /main/imgui.collectionc
 render = /main/main.renderc
 
 [script]
@@ -18,7 +18,7 @@ package = com.defold.example.basic3d
 debuggable = 0
 
 [project]
-dependencies = https://github.com/Insality/druid/archive/master.zip
+dependencies = 
 title = Water Shader
 
 [physics]

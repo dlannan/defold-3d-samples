@@ -55,11 +55,11 @@ highp vec3 totalMie( highp float T ) {
 
 void main() {
 
-	highp vec4 worldPosition = mtx_worldview * highp vec4(position.xyz, 1.0);
-	vWorldPosition = worldPosition.xyz;
+	highp vec4 worldPosition = highp vec4(position.xyz, 1.0);
+	vWorldPosition = (worldPosition * mtx_worldview).xyz;
 
 	gl_Position = mtx_proj * worldPosition;
-			
+
 	vSunDirection = normalize( sunposition.xyz );
 	vSunE = sunIntensity( dot( vSunDirection, up ) );
 	vSunfade = 0.75 * min(1.0, max(0.0, (0.03125 + sunposition.y) / 0.0625));
