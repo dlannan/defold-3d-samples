@@ -1,5 +1,5 @@
 
-local geom = require("main.scripted_geom")
+local geom = require("geometry.geometry-utils")
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
