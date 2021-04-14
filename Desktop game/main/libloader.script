@@ -1,0 +1,16 @@
+print(Glibrary, Geffect)
+
+--local libraries = string.format("libraries.%1d.%1d", Glibrary, Geffect)
+print(libraries)
+-- require(libraries)
+local libraries = string.format("libraries/%1d/%1d.lua", Glibrary, Geffect)
+module = dofile(libraries)
+
+function init(self)
+	self.id = Glibrary..Geffect
+end
+
+function update(self, dt)
+	print("ID:", self.id)
+end
+
