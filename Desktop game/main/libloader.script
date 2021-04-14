@@ -1,16 +1,43 @@
 print(Glibrary, Geffect)
 
---local libraries = string.format("libraries.%1d.%1d", Glibrary, Geffect)
+-- A require method that uses dofile
+--  GAllModules is defined in main
+local function newrequire( mpath )
+
+	-- make mpath nice 
+	mpath = mpath:gsub( "%.", "/" )
+	-- If platform windows use
+	-- mpath = mpath:gsub( ".", "\\" )
+	mpath = mpath..".lua"
+	
+	local module = dofile( mpath )
+	-- Module fix
+	if(GAllModules[mpath]) then return GAllModules[mpath] end 
+	GAllModules[mpath] = module
+	return module
+end 
+
+local libraries = string.format("libraries.%1d.%1d", Glibrary, Geffect)
 print(libraries)
--- require(libraries)
-local libraries = string.format("libraries/%1d/%1d.lua", Glibrary, Geffect)
-module = dofile(libraries)
+
+local test = newrequire(libraries)
+
+Glibrary = Glibrary + 1
+Geffect = Geffect + 1
 
 function init(self)
 	self.id = Glibrary..Geffect
+	self.module = test
+	self.ticker = 0
 end
 
 function update(self, dt)
-	print("ID:", self.id)
+
+	self.ticker = self.ticker + dt
+	if(self.ticker > 1.0) then 
+		print("ID:", self.id)
+		self.module.run("TEST")
+		self.ticker = self.ticker - 1.0 
+	end 
 end
 

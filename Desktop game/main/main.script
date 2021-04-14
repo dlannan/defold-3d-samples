@@ -1,5 +1,6 @@
-Glibrary = 0  -- globals! ;)
-Geffect = 0
+GAllModules 	= {}
+Glibrary 		= 0  -- globals! ;)
+Geffect 		= 0
 
 -- local test = require("libraries.0.0")
 
