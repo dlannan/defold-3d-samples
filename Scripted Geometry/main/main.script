@@ -22,7 +22,8 @@ function init(self)
 -- 	model.set_constant("#sphere", "light", self.light)
 -- 
 	-- Generate a cube mesh with size 1 with 1 subdiv
-	geom:GenerateCube("/main#genmesh", 0.5, 1 )
+	--geom:GenerateCube("/main#genmesh", 0.5, 1 )
+	geom:GenerateBlock("/main#genmesh", 0.5, 6, 1 )
 	model.set_constant("/main#genmesh", "light", self.light)
 end
 

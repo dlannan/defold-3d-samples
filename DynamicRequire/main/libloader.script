@@ -41,3 +41,8 @@ function update(self, dt)
 	end 
 end
 
+function on_message(self, message_id, message, sender)
+
+	libraries.pass_message( message_id, message, sender )
+end 
+
